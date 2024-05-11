@@ -1,0 +1,12 @@
+name: Jenkinsfile Runner
+
+on: push
+jobs:
+  jenkinsfile-runner-prepackaged:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: jenkinsfile-runner-prepackaged
+      uses: jenkinsci/jenkinsfile-runner-prepackaged@master
+      with:
+        jenkinsfile: Jenkinsfile
